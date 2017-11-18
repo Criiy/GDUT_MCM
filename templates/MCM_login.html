@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>MCM_mainpage</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/MCM_mainpage.css">
+    <script type="text/javascript">
+    function openDeal(){
+         window.location.href="http://127.0.0.1:8000/register/";//跳转链接
+                        }
+    function openDea2(){
+         window.location.href="http://127.0.0.1:8000/xadmin/";//跳转链接
+                        }
+    </script>
+</head>
+<body>
+    <div class="content">
+        <div class="bg_img"></div>
+        <div class="main_box">
+            <div class="login_box">
+                <div class="login_logo">
+                    <img src="/static/img/gdut_logo.jpg" width="250px" height="110px">
+                </div>
+                <div class="intro">
+                    <p class="intro_1">美国大学生数学建模竞赛报名系统</p>
+                    <p class="intro_2">Registration System of</p>
+                    <p class="intro_3">Mathematical Contest In Modeling(MCM) & Interdisciplinary Contest In Modeling(ICM)</p>
+                </div>
+                <div class="login_form">
+                    <form action="{% url "login" %}" method="POST">
+
+                        <input type='hidden' name='csrfmiddlewaretoken' value='mymQDzHWl2REXIfPMg2mJaLqDfaS1sD5' />
+
+                        <div class="form_group">
+                            <input type="text" class="txt_group" placeholder="账号" style="width: 265px; height: 40px" name="studentid"/>
+                        </div>
+
+                        <div class="form_group">
+                            <input type="password"  class="txt_group" placeholder="密码" style="width: 265px; height: 40px" name="studentpwd"/>
+                        </div>
+
+                         <div class="form_group" >{{ msg3 }}</div>
+                        <div class="auto-box marb8">
+                        </div>
+
+                        <div class="form_group">
+                            <input type="submit" value="登录" class="button_group" style="width: 268px; height: 43px"/>
+                        </div>
+                        <div class="form_group">
+                        <div class="bottom">
+                            <div class="form_group">
+                                <input type="button" value="教师登录" class="button_group" style="width: 130px; height: 43px" onclick="openDea2()">
+                            </div>
+                            <div class="form_group_icon bottom_icon">
+                                <input type="button" value="注册" class="button_group" style="width: 130px; height: 43px" onclick="openDeal()">
+                                <input type='hidden' name='csrfmiddlewaretoken' value='5I2SlleZJOMUX9QbwYLUIAOshdrdpRcy' />
+                                {% csrf_token %}
+                            </div>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

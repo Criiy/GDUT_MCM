@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>MCM_infopages</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/MCM_infopages.css">
+        <script type="text/javascript">
+    function backlogin(){
+         window.location.href="http://127.0.0.1:8000/info";//跳转链接
+    }
+    function backlogin2(){
+         window.location.href="http://127.0.0.1:8000/";//跳转链接
+    }
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="bg_img"></div>
+    <div class="head">
+        <p>队员信息填写（所有信息都要填写）</p>
+        <div class="logo">
+            <img src="/static/img/gdut_logo.png" width="130px" height= 60px">
+        </div>
+    </div>
+    <form method="post" action="{% url "Teaminfo" %}">
+    <div class="register">
+        <div class="main">
+            <div class="reg_group">
+                <p class="member">队长信息：<br /></p>
+                <div class="info name">
+                    <font color="red">*</font><label class="tips">拼音</label>
+                    <input type="text" class="txt" placeholder="输入姓名拼音全拼" name="short_name1" value="{{ user.short_name1 }}">
+                    <br>
+                </div>
+                <div class="info name">
+                    <font color="red">*</font><label class="tips">姓名</label>
+                    <input type="text" class="txt" placeholder="输入完整姓名" name="name1" value="{{ user.name1 }}">
+                    <br>
+                </div>
+                <div class="info sex">
+                    <font color="red">*</font><label class="tips">性别</label>
+                    男<input type="radio" class="check" name="gender1" value="male" >&nbsp;&nbsp;女<input type="radio" class="check" name="gender1" value="female">
+                    <br>
+                </div>
+                <div class="info major">
+                    <font color="red">*</font><label class="tips">学院</label>
+                    <input type="text" class="txt" placeholder="输入学院全称" name="school1" value="{{ user.school1 }}">
+                    <br>
+                </div>
+                <div class="info major">
+                    <font color="red">*</font><label class="tips">专业</label>
+                    <input type="text" class="txt" placeholder="输入专业全称" name="major1" value="{{ user.major1 }}">
+                    <br>
+                </div>
+                <div class="info num">
+                    <font color="red">*</font><label class="tips">学号</label>
+                    <input type="text" class="txt" placeholder="输入10位学号" name="student_id1" value="{{ user.student_id1 }}">
+                    <br>
+                </div>
+                <div class="info tel">
+                    <font color="red">*</font><label class="tips">电话</label>
+                    <input type="text" class="txt" placeholder="输入电话号码" name="tel_num1" value="{{ user.tel_num1 }}">
+                    <br>
+                </div>
+                <div class="info mail">
+                    <font color="red">*</font><label class="tips">邮箱</label>
+                    <input type="text" class="txt" placeholder="输入邮箱地址" name="email1" value="{{ user.email1 }}">
+                    <br>
+                </div>
+            </div>
+            <div class="reg_group">
+                <p class="member">队员1信息：<br /></p>
+                <div class="info name">
+                    <font color="red">*</font><label class="tips">拼音</label>
+                    <input type="text" class="txt" placeholder="输入姓名拼音全拼" name="short_name2" value="{{ user.short_name2 }}">
+                    <br>
+                </div>
+                <div class="info name">
+                    <font color="red">*</font><label class="tips">姓名</label>
+                    <input type="text" class="txt" placeholder="输入姓名" name="name2" value="{{ user.name2 }}">
+                    <br>
+                </div>
+                <div class="info sex">
+                    <font color="red">*</font><label class="tips">性别</label>
+                    男<input type="radio" class="check" name="gender2" value="male">&nbsp;&nbsp;女<input type="radio" class="check" name="gender2" value="female">
+                    <br>
+                </div>
+                <div class="info major">
+                    <font color="red">*</font><label class="tips">学院</label>
+                    <input type="text" class="txt" placeholder="输入学院全称" name="school2" value="{{ user.school2 }}">
+                    <br>
+                </div>
+                <div class="info major">
+                    <font color="red">*</font><label class="tips">专业</label>
+                    <input type="text" class="txt" placeholder="输入专业全称" name="major2" value="{{ user.major2 }}">
+                    <br>
+                </div>
+                <div class="info num">
+                    <font color="red">*</font><label class="tips">学号</label>
+                    <input type="text" class="txt" placeholder="输入10位学号" name="student_id2" value="{{ user.student_id2 }}">
+                    <br>
+                </div>
+                <div class="info tel">
+                    <font color="red">*</font><label class="tips">电话</label>
+                    <input type="text" class="txt" placeholder="输入电话号码" name="tel_num2" value="{{ user.tel_num2 }}">
+                    <br>
+                </div>
+                <div class="info mail">
+                    <font color="red">*</font><label class="tips">邮箱</label>
+                    <input type="text" class="txt" placeholder="输入邮箱地址" name="email2" value="{{ user.email2 }}">
+                    <br>
+                </div>
+            </div>
+            <div class="reg_group">
+                <p class="member">队员2信息：<br /></p>
+                <div class="info name">
+                    <font color="red">*</font><label class="tips">拼音</label>
+                    <input type="text" class="txt" placeholder="输入姓名拼音全拼" name="short_name3" value="{{ user.short_name3 }}">
+                    <br>
+                </div>
+                <div class="info name">
+                    <font color="red">*</font><label class="tips">姓名</label>
+                    <input type="text" class="txt" placeholder="输入姓名" name="name3" value="{{ user.name3 }}">
+                    <br>
+                </div>
+                <div class="info sex">
+                    <font color="red">*</font><label class="tips">性别</label>
+                    男<input type="radio" class="check" name="gender3" value="male">&nbsp;&nbsp;女<input type="radio" class="check" name="gender3" value="female">
+                    <br>
+                </div>
+                <div class="info major">
+                    <font color="red">*</font><label class="tips">学院</label>
+                    <input type="text" class="txt" placeholder="输入学院全称" name="school3" value="{{ user.school3 }}">
+                    <br>
+                </div>
+                <div class="info major">
+                    <font color="red">*</font><label class="tips">专业</label>
+                    <input type="text" class="txt" placeholder="输入专业全称" name="major3" value="{{ user.major3 }}">
+                    <br>
+                </div>
+                <div class="info num">
+                    <font color="red">*</font><label class="tips">学号</label>
+                    <input type="text" class="txt" placeholder="输入10位学号" name="student_id3" value="{{ user.student_id3 }}">
+                    <br>
+                </div>
+                <div class="info tel">
+                    <font color="red">*</font><label class="tips">电话</label>
+                    <input type="text" class="txt" placeholder="输入电话号码" name="tel_num3" value="{{ user.tel_num3 }}">
+                    <br>
+                </div>
+                <div class="info mail">
+                    <font color="red">*</font><label class="tips">邮箱</label>
+                    <input type="text" class="txt" placeholder="输入邮箱地址" name="email3" value="{{ user.email3 }}">
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="foot_btn">
+                <div class="btn_group">
+                    <div class="btn">
+                        <input type="submit" class="confirm" value="确认提交" style="height: 40px; width: 160px">
+                        {% csrf_token %}
+                    </div>
+                    <div class="btn">
+                        <input type="button" class="confirm" value="查看信息" onclick="backlogin()" style="height: 40px; width: 160px">
+                    </div>
+                    <div class="btn">
+                        <input type="button" class="confirm" value="返回登录" onclick="backlogin2()" style="height: 40px; width: 160px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
+</body>
+</html>

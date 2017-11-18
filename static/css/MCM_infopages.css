@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Microsoft YaHei UI";
+    font-size: 16px;
+}
+input{
+    height: 20px;
+    padding: 5px;
+    font-size: 13px;
+}
+.bg_img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/static/img/bg.jpg') no-repeat;
+    background-size: cover;
+    opacity: 0.12;
+    z-index: -1;
+}
+.wrapper{
+    width: 1000px;
+    margin: 30px auto;
+    box-shadow: 1px 1px 10px #666666;
+}
+.head{
+    height: 60px;
+    line-height: 60px;
+    background: #55abed;
+    color: white;
+    padding-left: 10px;
+    position: relative;
+}
+.head img{
+    position: absolute;
+    top:0;
+    right: 0;
+}
+.register{
+    min-height: 400px;
+    background: white;
+}
+.main{
+    width: 910px;
+    min-height: 430px;
+    margin: 0px auto;
+}
+.reg_group{
+    float: left;
+    padding: 50px 35px 0 25px;
+}
+.info{
+    margin-bottom: 7px;
+}
+.member{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.tips{
+    margin-right: 7px;
+}
+.txt{
+    list-style: none;
+    width: 170px;
+    outline: none;
+    border: 1px solid darkgrey;
+    border-radius: 3px;
+}
+.check{
+    width: 15px;
+    height: 15px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+.foot{
+    padding: 0px 0 50px 0;
+}
+.btn{
+    margin: 0 10px 0 10px;
+    width: 170px;
+    height: 45px;
+}
+.confirm{
+    background-color: #55abed;
+    color: white;
+    font-size: 18px;
+    border: solid 1px #55abed;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.confirm:hover{
+    box-shadow: 1px 1px 7px gray;
+}
+.btn_group{
+    margin: 0 auto;
+    width: 580px;
+    height: 50px;
+}
+.btn_group div{
+    float: left;
+}
+.foot_button{
+    width: 200px;
+    margin: 0 auto;
+}

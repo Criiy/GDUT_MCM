@@ -1,0 +1,126 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    min-width: 850px;
+    min-height: 600px;
+    text-align: center;
+    background: none;
+    width: 100%;
+    height: 100%;
+    font-family:  "Microsoft YaHei UI";
+
+}
+.bg_img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('/static/img/bg.jpg') no-repeat;
+    background-size: cover;
+    opacity: 0.12;
+    z-index: -1;
+}
+.main_box{
+    width: 850px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+.intro{
+    font-family: "Microsoft YaHei UI";
+    width: 100%;
+    margin-top: -15px;
+}
+.intro_1{
+    font-size: 50px;
+    letter-spacing: 4px;
+}
+.intro_2{
+    margin-top:5px;
+    font-size: 18px;
+}
+.intro_3{
+    margin-top:5px;
+    font-size: 17px;
+}
+.login_box{
+    padding-top: 0;
+}
+.login_form{
+    padding-top: 35px;
+}
+.form_group{
+    margin-bottom: 15px;
+}
+.txt_group{
+    list-style: none;
+    border: solid 2px #55abed;
+    padding-left: 8px;
+    font-size: 17px;
+    border-radius: 70px;
+}
+.button_group{
+    background-color: #55abed;
+    color: white;
+    font-size: 18px;
+    border: solid 1px #55abed;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button_group:hover{
+    box-shadow: 1px 1px 7px gray;
+}
+.bottom{
+    width: 270px;
+    height: 40px;
+    margin: 0 auto;
+}
+.bottom div{
+    float: left;
+}
+.bottom_icon{
+    margin-left: 10px;
+}
+.code_group{
+    width: 270px;
+    height: 40px;
+    margin: 0 auto;
+    position: relative;
+}
+#code{
+    margin: 0 auto;
+}
+#code_img{
+    margin-right: -120px;
+    margin-bottom: -20px;
+
+}
+.captcha1 > input{
+    width: 80px;
+}
+.captcha1 > img {
+    margin-top: 5px;
+}
+.fuck img{
+    vertical-align: text-top;
+    position: absolute;
+    right: 0;
+    top: 3px;
+}
+.fuck input{
+    position: absolute;
+    left: 0px;
+    color: black;
+	width: 165px;
+    height: 38px;
+    line-height: 30px;
+    border: 2px solid #55abed;
+    border-radius: 50px;
+    vertical-align: text-top;
+}

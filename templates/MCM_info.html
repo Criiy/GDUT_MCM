@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>MCM_infopages</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/MCM_infopages.css">
+        <script type="text/javascript">
+    function backlogin(){
+         window.location.href="http://127.0.0.1:8000/Teaminfo";//跳转链接
+    }
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="bg_img"></div>
+    <div class="head">
+        <p>队员信息填写（所有信息都要填写）</p>
+        <div class="logo">
+            <img src="/static/img/gdut_logo.jpg" width="130px" height= 60px">
+        </div>
+    </div>
+    <form method="post" action="{% url "Teaminfo" %}">
+    <div class="register">
+        <div class="main">
+            <div class="reg_group">
+                <p class="member">队长信息：<br /></p>
+                <div class="info name">
+                    <label class="tips">姓名: </label>
+                    <label class="tips">{{ user.name1 }}</label>
+                    <br>
+                </div>
+                <div class="info sex">
+                    <label class="tips">性别:</label>
+                    <label class="tips">{{ a }}</label>
+                    <br>
+                </div>
+                <div class="info major">
+                    <label class="tips">专业:</label>
+                    <label class="tips">{{ user.major1 }}</label>
+                    <br>
+                </div>
+                <div class="info num">
+                    <label class="tips">学号:</label>
+                    <label class="tips">{{ user.student_id1 }}</label>
+                    <br>
+                </div>
+                <div class="info tel">
+                    <label class="tips">电话:</label>
+                     <label class="tips">{{ user.tel_num1 }}</label>
+                    <br>
+                </div>
+                <div class="info mail">
+                    <label class="tips">邮箱:</label>
+                    <label class="tips">{{ user.email1 }}</label>
+                    <br>
+                </div>
+            </div>
+            <div class="reg_group">
+                <p class="member">队员1信息：<br /></p>
+                <div class="info name">
+                    <label class="tips">姓名:</label>
+                    <label class="tips">{{ user.name2 }}</label>
+                    <br>
+                </div>
+                <div class="info sex">
+                    <label class="tips">性别:</label>
+                     <label class="tips">{{ b }}</label>
+                    <br>
+                </div>
+                <div class="info major">
+                    <label class="tips">专业:</label>
+                    <label class="tips">{{ user.major2 }}</label>
+                    <br>
+                </div>
+                <div class="info num">
+                    <label class="tips">学号:</label>
+                    <label class="tips">{{ user.student_id2 }}</label>
+                    <br>
+                </div>
+                <div class="info tel">
+                    <label class="tips">电话:</label>
+                    <label class="tips">{{ user.tel_num2 }}</label>
+                    <br>
+                </div>
+                <div class="info mail">
+                    <label class="tips">邮箱:</label>
+                    <label class="tips">{{ user.email2 }}</label>
+                    <br>
+                </div>
+            </div>
+            <div class="reg_group">
+                <p class="member">队员2信息：<br /></p>
+                <div class="info name">
+                    <label class="tips">姓名:</label>
+                    <label class="tips">{{ user.name3 }}</label>
+                    <br>
+                </div>
+                <div class="info sex">
+                    <label class="tips">性别:</label>
+                    <label class="tips">{{ c }}</label>
+                    <br>
+                </div>
+                <div class="info major">
+                    <label class="tips">专业:</label>
+                    <label class="tips">{{ user.major3 }}</label>
+                    <br>
+                </div>
+                <div class="info num">
+                    <label class="tips">学号:</label>
+                    <label class="tips">{{ user.student_id3 }}</label>
+                    <br>
+                </div>
+                <div class="info tel">
+                    <label class="tips">电话:</label>
+                    <label class="tips">{{ user.tel_num3 }}</label>
+                    <br>
+                </div>
+                <div class="info mail">
+                    <label class="tips">邮箱:</label>
+                    <label class="tips">{{ user.email3 }}</label>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <div class="foot_button">
+                <input type="button" class="confirm" value="返回填写" onclick="backlogin()" style="height: 40px; width: 160px">
+            </div>
+        </div>
+    </div>
+        </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh">
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <title>MCM_mainpage</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/MCM_mainpage.css">
+    <script src="/static/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+
+    function backlogin(){
+         window.location.href="http://127.0.0.1:8000/";//跳转链接
+    }
+    </script>
+</head>
+<body>
+    <div class="content">
+        <div class="bg_img"></div>
+        <div class="main_box">
+            <div class="login_box">
+                <div class="login_logo">
+                    <img src="/static/img/gdut_logo.jpg" width="250px" height="110px">
+                </div>
+                <div class="intro">
+                    <p class="intro_1">美国大学生数学建模竞赛报名系统</p>
+                    <p class="intro_2">Registration System of</p>
+                    <p class="intro_3">Mathematical Contest In Modeling(MCM) & Interdisciplinary Contest In Modeling(ICM)</p>
+                </div>
+                <div class="login_form" >
+                    <form  method="post"  action="{% url 'register' %}" >
+                        <input type='hidden' name='csrfmiddlewaretoken' value='mymQDzHWl2REXIfPMg2mJaLqDfaS1sD5' />
+                        <div class="form_group">
+                            <input type="text" class="txt_group" placeholder="账号" style="width: 265px; height: 40px" name="studentid"/>
+                        </div>
+                        <div class="form_group">
+                            <input type="password"  class="txt_group" placeholder="密码" style="width: 265px; height: 40px" name="studentpwd"/>
+                        </div>
+{#                        <div class="fuck">#}
+{#                            {{ register_form.captcha }}#}
+{#                        </div>#}
+                        <div class="fuck ">
+                            <div class="code_group">
+                                <input type="text"  id="id_reg_captcha_1" name="captcha_1" class="form-control form-control-captcha fl txt_group" placeholder="验证码" autocomplete="off">
+                                <span class="v5-yzm fr"><a href="javascript:" class="next-captcha" onclick="changeSrc()"><img src="{{ imgage_url }}" class="captcha" alt="captcha"></a></span>
+                                <input id="id_reg_captcha_0" name="captcha_0" type="hidden" value="{{ hashkey }}">
+                            </div>
+                        </div>
+                        <script>
+                            $(".captcha").click(function () {
+                                var tamp = new Date().getTime();
+                                $(this).attr("src","{{ imgage_url}}"+"?"+tamp);
+                            })
+                        </script>
+                        <div class="form_group" >{{ msg }}{{ msg2 }}</div>
+                        <div class="auto-box marb8">
+                        </div>
+                        <div class="form_group">
+                            <input type="submit" value="注 册" class="button_group" style="width: 268px; height: 43px"/>
+                        </div>
+                        <div class="form_group_icon">
+                            <input type="button" value="返 回" class="button_group" style="width: 268px; height: 43px" onclick="backlogin()"/>
+                        </div>
+                        <input type='hidden' name='csrfmiddlewaretoken' value='5I2SlleZJOMUX9QbwYLUIAOshdrdpRcy' />
+                        {% csrf_token %}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="javascript">
+    $(".fuck input").attr("placeholder","lasdjfklasdjf");
+</script>
+</body>
+</html>
